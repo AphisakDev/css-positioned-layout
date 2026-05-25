@@ -1,1 +1,96 @@
+body {
+  margin: 0;
+  font-family: "Sarabun", sans-serif;
+}
+
 /* Start coding here */
+.chat-header {
+  background-color: #888888;
+  padding: 16px 32px;
+}
+
+.chat-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 56px);
+  padding: 32px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.messages-sent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.messages-received {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.bubble {
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.bubble-gray {
+  background-color: #888888;
+  color: #ffffff;
+}
+
+.bubble-green {
+  background-color: #4ecd5b;
+  color: #000000;
+}
+
+.bubble-light-gray {
+  position: relative;
+  background-color: #e8e8e8;
+  color: #000000;
+}
+
+.bubble-tail {
+  position: relative;
+}
+
+.bubble-tail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -8px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #4ecd5b;
+  border-right: 10px solid transparent;
+}
+
+.close-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #888888;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
